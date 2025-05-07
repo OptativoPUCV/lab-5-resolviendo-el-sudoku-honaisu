@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int es_repetido(int* lista, int numero) {
-  for(int i = 0; lista[i]; i++) {
+  for(int i = 0; i < 9; i++) {
     if (lista[i] == numero) return 1;
   }
   return 0;
