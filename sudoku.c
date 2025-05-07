@@ -57,7 +57,7 @@ int is_valid(Node* n){
     int listaColumna[9] = {};
     do {
       listaFila[k] = n->sudo[i][k];
-      listaColuma[k] = n->sudo[k][i];
+      listaColumna[k] = n->sudo[k][i];
       if (es_repetido(listaFila, n->sudo[i][k])) return 0;
       if (es_repetido(listaColumna, n->sudo[k][i])) return 0;
     } while((k++) < 9);
