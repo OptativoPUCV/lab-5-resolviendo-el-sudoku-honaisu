@@ -55,14 +55,14 @@ List* get_adj_nodes(Node* n){
     for(int i = 0, k = 0; i < 9; i++, k = 0) {
       while(k < 9){
         if (!n->sudo[i][k]) {
-          int* new_number = (int*) malloc(sizeof(int));
-          if (counter == 9) counter = 1;
-          *new_number = counter; 
-
-          Node* node_copy = copy(n);
-          //node_copy->sudo[i][k] = counter;
-          node_copy->sudo[i][k] = *new_number;
-          pushBack(list, node_copy);
+          do{
+            int* new_number = (int*) malloc(sizeof(int));
+            *new_number = counter; 
+            Node* node_copy = copy(n);
+            //node_copy->sudo[i][k] = counter;
+            node_copy->sudo[i][k] = *new_number;
+            pushBack(list, node_copy);
+          } while ((counter = counter + 1) < 9);
           counter++;
         }
         k++;
