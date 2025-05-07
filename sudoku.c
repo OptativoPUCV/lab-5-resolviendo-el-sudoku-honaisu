@@ -69,7 +69,7 @@ int is_valid(Node* n){
     int i=3*(k/3) + (p/3) ;
     int j=3*(k%3) + (p%3) ;
     
-    if (es_repetido(listaSub, n->sudo[i][j]) return 0;
+    if (es_repetido(listaSub, n->sudo[i][j])) return 0;
     if(p%3 == 2) k++;
   }
   return 1;
