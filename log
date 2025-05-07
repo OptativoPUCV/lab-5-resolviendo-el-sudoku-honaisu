@@ -327,3 +327,31 @@ Wed, May  7, 2025  6:28:24 PM:
  tests:  2|4
 total_score: 15/70
 0ac4ba5
+Wed, May  7, 2025  6:31:28 PM: 
+ sudoku.c | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'verificarConLista':
+sudoku.c:50:12: error: 'n' undeclared (first use in this function)
+       if (!n->sudo[i][k]) continue;
+            ^
+sudoku.c:50:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:48:9: error: variable 'listaFila' set but not used [-Werror=unused-but-set-variable]
+     int listaFila[10] = {0} ;
+         ^~~~~~~~~
+sudoku.c: In function 'is_valid':
+sudoku.c:62:26: error: passing argument 1 of 'verificarConLista' from incompatible pointer type [-Werror=incompatible-pointer-types]
+   if (!verificarConLista(n->sudo, i, k)) return 0;
+                          ^
+sudoku.c:46:5: note: expected 'int **' but argument is of type 'int (*)[9]'
+ int verificarConLista(int** sudo, int i, int k) {
+     ^~~~~~~~~~~~~~~~~
+sudoku.c:63:26: error: passing argument 1 of 'verificarConLista' from incompatible pointer type [-Werror=incompatible-pointer-types]
+   if (!verificarConLista(n->sudo, k, i)) return 0;
+                          ^
+sudoku.c:46:5: note: expected 'int **' but argument is of type 'int (*)[9]'
+ int verificarConLista(int** sudo, int i, int k) {
+     ^~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+0468fc6

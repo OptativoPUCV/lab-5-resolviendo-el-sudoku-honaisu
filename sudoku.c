@@ -43,26 +43,24 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int es_repetido(int* lista, int numero) {
-  for(int i = 0; i < 9; i++) {
-    if (lista[i] == numero) return 1;
+int verificarConLista(int** sudo, int i, int k) {
+  for (i = 0, k = 0; i < 9; i++, k = 0) {
+    int listaFila[10] = {0} ;
+    do {
+      if (!n->sudo[i][k]) continue;
+      if (listaFila[n->sudo[i][k]]) return 0;
+
+      listaFila[n->sudo[i][k]] = 1;
+    } while((k++)<8);
   }
-  return 0;
+  return 1;
 }
 
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
-  for (int i = 0, k = 0; i < 8; i++, k = 0) {
-    int listaFila[10] = {0} ;
-    int listaColumna[10] = {0};
-    do {
-      if (!n->sudo[i][k] || !n->sudo[k][i]) continue;
-      if (listaFila[n->sudo[i][k]] || listaColumna[n->sudo[k][i]]) return 0;
-
-      listaFila[n->sudo[i][k]] = 1;
-      listaColumna[n->sudo[k][i]] = 1;  
-    } while((k++)<8);
-  }
+  int i, k;
+  if (!verificarConLista(n->sudo, i, k)) return 0;
+  if (!verificarConLista(n->sudo, k, i)) return 0;
 
   // Caso 3: Submatrices
   /*
