@@ -58,7 +58,7 @@ int verificarConLista(int sudo[9][9], int i, int k) {
 
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
-  int i, k;
+  int i = 0, k = 0;
   if (!verificarConLista(n->sudo, i, k)) return 0;
   if (!verificarConLista(n->sudo, k, i)) return 0;
 
