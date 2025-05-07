@@ -355,3 +355,18 @@ sudoku.c:46:5: note: expected 'int **' but argument is of type 'int (*)[9]'
      ^~~~~~~~~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 0468fc6
+Wed, May  7, 2025  6:31:40 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'verificarConLista':
+sudoku.c:50:12: error: 'n' undeclared (first use in this function)
+       if (!n->sudo[i][k]) continue;
+            ^
+sudoku.c:50:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:48:9: error: variable 'listaFila' set but not used [-Werror=unused-but-set-variable]
+     int listaFila[10] = {0} ;
+         ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+23097d8

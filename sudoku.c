@@ -43,7 +43,7 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int verificarConLista(int** sudo, int i, int k) {
+int verificarConLista(int sudo[9][9], int i, int k) {
   for (i = 0, k = 0; i < 9; i++, k = 0) {
     int listaFila[10] = {0} ;
     do {
