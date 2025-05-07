@@ -135,3 +135,14 @@ sudoku.c:57:9: error: unused variable 'listaColumna' [-Werror=unused-variable]
          ^~~~~~~~~~~~
 cc1.exe: all warnings being treated as errors
 dddfa0f
+Wed, May  7, 2025  5:51:51 PM: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:60:7: error: 'listaColuma' undeclared (first use in this function)
+       listaColuma[k] = n->sudo[k][i];
+       ^~~~~~~~~~~
+sudoku.c:60:7: note: each undeclared identifier is reported only once for each function it appears in
+9d1ce2e
