@@ -62,6 +62,7 @@ int is_valid(Node* n){
       //listaColumna[n->sudo[k][i]] = 1;
       k++;
     }
+    memset(listaFila, 0, sizeof(listaFila));
   }
 
   // Caso 3: Submatrices
