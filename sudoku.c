@@ -63,6 +63,7 @@ int is_valid(Node* n){
       //listaColumna[n->sudo[k][i]] = 1;
       k++;
     }
+    printf("\n");
   }
 
   // Caso 3: Submatrices
