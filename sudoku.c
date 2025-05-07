@@ -53,10 +53,13 @@ int es_repetido(int* lista, int numero) {
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   for (int i = 0, k = 0; i < 9; i++, k = 0) {
-    int listaFila[9] = {} ;
+    int listaFila[9] = {};
+    int listaColumna[9] = {};
     do {
       listaFila[k] = n->sudo[i][k];
+      listaColuma[k] = n->sudo[k][i];
       if (es_repetido(listaFila, n->sudo[i][k])) return 0;
+      if (es_repetido(listaColuma, n->sudo[k][i])) return 0;
     } while((k++) < 9);
   }
   return 1;
