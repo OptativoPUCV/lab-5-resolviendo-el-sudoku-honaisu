@@ -55,7 +55,7 @@ List* get_adj_nodes(Node* n){
       while(k < 9){
         if (!n->sudo[i][k]) {
           int* new_number = (int*) malloc(sizeof(int));
-          if (counter == 9) counter = 1;
+          //if (counter == 9) counter = 1;
           *new_number = k; 
 
           Node* node_copy = copy(n);
