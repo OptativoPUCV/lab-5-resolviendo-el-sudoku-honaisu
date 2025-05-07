@@ -62,6 +62,16 @@ int is_valid(Node* n){
       if (es_repetido(listaColumna, n->sudo[k][i])) return 0;
     } while((k++) < 9);
   }
+
+  int k=0,p; 
+  for(p=0;p<9;p++){
+    int listaSub[9] = {};
+    int i=3*(k/3) + (p/3) ;
+    int j=3*(k%3) + (p%3) ;
+    
+    if (es_repetido(listaSub, n->sudo[i][j]) return 0;
+    if(p%3 == 2) k++;
+  }
   return 1;
 }
 
