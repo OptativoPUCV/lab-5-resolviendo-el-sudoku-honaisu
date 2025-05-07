@@ -60,11 +60,9 @@ int is_valid(Node* n){
       if (listaFila[n->sudo[i][k]]) return 0;
 
       listaFila[n->sudo[i][k]] = 1;
-      printf("%d ", n->sudo[i][k]);
       //listaColumna[n->sudo[k][i]] = 1;
       
     } while((k++)<8);
-    puts("");
   }
 
   // Caso 3: Submatrices
