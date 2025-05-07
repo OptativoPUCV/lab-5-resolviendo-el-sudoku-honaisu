@@ -91,7 +91,8 @@ List* get_adj_nodes(Node* n){
             *new_number = counter; 
             Node* node_copy = copy(n);
             node_copy->sudo[i][k] = *new_number;
-            pushBack(list, node_copy);
+
+            (is_valid(node_copy)) ? pushBack(list, node_copy) : free(node_copy);
           } while ((counter = counter + 1) < 9);
           // Por si hay más de un espacio vacío,
           // vuelve al valor original (?)
