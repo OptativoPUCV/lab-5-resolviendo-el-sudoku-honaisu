@@ -402,3 +402,17 @@ Wed, May  7, 2025  6:34:02 PM:
  tests:  5|3
 total_score: 35/70
 7eccf10
+Wed, May  7, 2025  6:37:19 PM: 
+ sudoku.c | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:76:5: error: expected expression before '/' token
+   }*/
+     ^
+sudoku.c:78:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+d62733d
