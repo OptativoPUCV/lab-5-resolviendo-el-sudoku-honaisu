@@ -53,8 +53,8 @@ int es_repetido(int* lista, int numero) {
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   for (int i = 0, k = 0; i < 9; i++, k = 0) {
-    int listaFila[9] = {};
-    int listaColumna[9] = {};
+    int listaFila[10] = {};
+    int listaColumna[10] = {};
     do {
       listaFila[k] = n->sudo[i][k];
       listaColumna[k] = n->sudo[k][i];
@@ -63,9 +63,10 @@ int is_valid(Node* n){
     } while((k++) < 9);
   }
 
+  // Caso 3: Submatrices
   int k=0,p; 
   for(p=0;p<9;p++){
-    int listaSub[9] = {};
+    int listaSub[10] = {};
     int i=3*(k/3) + (p/3) ;
     int j=3*(k%3) + (p%3) ;
     
