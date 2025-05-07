@@ -52,7 +52,7 @@ int es_repetido(int* lista, int numero) {
 
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
-  for (int i = 0, k = 0; i < 9; i++, k = 0) {
+  for (int i = 0, k = 0; i < 8; i++, k = 0) {
     int listaFila[10] = {0} ;
     int listaColumna[10] = {0};
     do {
