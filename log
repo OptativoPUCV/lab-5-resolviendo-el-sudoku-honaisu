@@ -370,3 +370,17 @@ sudoku.c:48:9: error: variable 'listaFila' set but not used [-Werror=unused-but-
          ^~~~~~~~~
 cc1.exe: all warnings being treated as errors
 23097d8
+Wed, May  7, 2025  6:33:12 PM: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'verificarConLista':
+sudoku.c:50:12: error: 'n' undeclared (first use in this function)
+       if (!n->sudo[i][k]) continue;
+            ^
+sudoku.c:50:12: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:48:9: warning: variable 'lista' set but not used [-Wunused-but-set-variable]
+     int lista[10] = {0} ;
+         ^~~~~
+78e7167
