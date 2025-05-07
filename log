@@ -38,3 +38,14 @@ Wed, May  7, 2025  5:14:40 PM:
  tests:  0|5
 total_score: 0/70
 a4bed90
+Wed, May  7, 2025  5:16:40 PM: 
+ sudoku.c | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:63:33: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+           node_copy->sudo[i][k] = new_number;
+                                 ^
+cc1.exe: all warnings being treated as errors
+c90091b
