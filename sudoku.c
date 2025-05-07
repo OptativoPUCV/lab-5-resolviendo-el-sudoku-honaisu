@@ -59,11 +59,10 @@ List* get_adj_nodes(Node* n){
             int* new_number = (int*) malloc(sizeof(int));
             *new_number = counter; 
             Node* node_copy = copy(n);
-            //node_copy->sudo[i][k] = counter;
             node_copy->sudo[i][k] = *new_number;
             pushBack(list, node_copy);
           } while ((counter = counter + 1) < 9);
-          counter++;
+          counter = 1;
         }
         k++;
       }
