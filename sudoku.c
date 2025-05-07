@@ -54,7 +54,7 @@ int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   for (int i = 0, k = 0; i < 9; i++, k = 0) {
     int listaFila[10] = {0} ;
-    int listaColumna[10] = {0};
+    //int listaColumna[10] = {0};
     while (k < 9) {
       //if (listaFila[n->sudo[i][k]]) return 0;
 
