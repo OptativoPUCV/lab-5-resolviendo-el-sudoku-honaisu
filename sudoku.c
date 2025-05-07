@@ -73,7 +73,7 @@ int is_valid(Node* n){
     
     listaSub[n->sudo[i][j]] = 1;
     if(p%3 == 2) k++;
-  }*/
+  }
   return 1;
 }
 
