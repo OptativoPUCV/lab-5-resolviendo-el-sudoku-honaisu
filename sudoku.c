@@ -63,7 +63,7 @@ int is_valid(Node* n){
       printf("%d ", n->sudo[i][k]);
       //listaColumna[n->sudo[k][i]] = 1;
       
-    } while((k++)<9);
+    } while((k++)<8);
     puts("");
   }
 
