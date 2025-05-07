@@ -47,10 +47,10 @@ int verificarConLista(int sudo[9][9], int i, int k) {
   for (i = 0, k = 0; i < 9; i++, k = 0) {
     int lista[10] = {0} ;
     do {
-      if (!n->sudo[i][k]) continue;
-      if (lista[n->sudo[i][k]]) return 0;
+      if (!sudo[i][k]) continue;
+      if (lista[sudo[i][k]]) return 0;
 
-      lista[n->sudo[i][k]] = 1;
+      lista[sudo[i][k]] = 1;
     } while((k++)<8);
   }
   return 1;

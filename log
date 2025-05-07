@@ -384,3 +384,15 @@ sudoku.c:48:9: warning: variable 'lista' set but not used [-Wunused-but-set-vari
      int lista[10] = {0} ;
          ^~~~~
 78e7167
+Wed, May  7, 2025  6:33:37 PM: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+test.c: In function 'is_valid':
+sudoku.c:62:8: error: 'i' is used uninitialized in this function [-Werror=uninitialized]
+   if (!verificarConLista(n->sudo, i, k)) return 0;
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+sudoku.c:62:8: error: 'k' is used uninitialized in this function [-Werror=uninitialized]
+cc1.exe: all warnings being treated as errors
+7ca5c20
