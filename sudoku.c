@@ -56,7 +56,7 @@ int is_valid(Node* n){
     int listaFila[10] = {};
     //int listaColumna[10] = {};
     do {
-      if (listaFila[k] || listaColumna[k]) return 0;
+      if (listaFila[k]) return 0;
 
       listaFila[n->sudo[i][k]] = 1;
       //listaColumna[n->sudo[k][i]] = 1;
