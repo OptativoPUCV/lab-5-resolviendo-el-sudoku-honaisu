@@ -54,14 +54,13 @@ int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   for (int i = 0, k = 0; i < 9; i++, k = 0) {
     int listaFila[10] = {0} ;
-    //int listaColumna[10] = {0};
+    int listaColumna[10] = {0};
     do {
       if (!n->sudo[i][k]) continue;      
-      if (listaFila[n->sudo[i][k]]) return 0;
+      if (listaFila[n->sudo[i][k]] || listaColumna[n->sudo[k][i]]) return 0;
 
       listaFila[n->sudo[i][k]] = 1;
-      //listaColumna[n->sudo[k][i]] = 1;
-      
+      listaColumna[n->sudo[k][i]] = 1;  
     } while((k++)<8);
   }
 
