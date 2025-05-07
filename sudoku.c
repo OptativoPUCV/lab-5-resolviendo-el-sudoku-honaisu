@@ -56,15 +56,15 @@ int is_valid(Node* n){
     int listaFila[10] = {};
     int listaColumna[10] = {};
     do {
-      if (es_repetido(listaFila, n->sudo[i][k])) return 0;
-      if (es_repetido(listaColumna, n->sudo[k][i])) return 0;
-      
-      listaFila[k] = n->sudo[i][k];
-      listaColumna[k] = n->sudo[k][i];
+      if (listaFila[k] || listaColumna[k]) return 0;
+
+      listaFila[n->sudo[i][k]] = 1;
+      listaColumna[n->sudo[k][i]] = 1;
     } while((k++) < 9);
   }
 
   // Caso 3: Submatrices
+  /*
   int k=0,p; 
   for(p=0;p<9;p++){
     int listaSub[10] = {};
@@ -73,7 +73,7 @@ int is_valid(Node* n){
     
     if (es_repetido(listaSub, n->sudo[i][j])) return 0;
     if(p%3 == 2) k++;
-  }
+  }*/
   return 1;
 }
 
