@@ -58,7 +58,7 @@ List* get_adj_nodes(Node* n){
           if (count == 9) count = 1;
 
           Node* node_copy = copy(n);
-          node_copy[i][k] = count;
+          node_copy->sudo[i][k] = count;
           pushBack(list, node_copy);
           count++;
         }
