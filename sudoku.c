@@ -43,9 +43,23 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int es_repetido(int* lista, int numero) {
+  for(int i = 0; lista[i]; i++) {
+    if (lista[i] == numero) return 1;
+  }
+  return 0;
+}
 
-    return 1;
+int is_valid(Node* n){
+  // Caso 1 y 2: Filas y columnas
+  for (int i = 0, k = 0; i < 9; i++, k = 0) {
+    int listaFila[9] = {} ;
+    do {
+      listaFila[k] = n->sudo[i][k];
+      if (es_repetido(listaFila, n->sudo[i][k])) return 0;
+    } while((k++) < 9);
+  }
+  return 1;
 }
 
 
