@@ -56,10 +56,11 @@ int is_valid(Node* n){
     int listaFila[10] = {0} ;
     //int listaColumna[10] = {0};
     while (k < 9) {
-      //if (listaFila[n->sudo[i][k]]) return 0;
+      
+      printf("%d ",listaFila[n->sudo[i][k]]);
+      if (listaFila[n->sudo[i][k]]) return 0;
 
       listaFila[n->sudo[i][k]] = 1;
-      printf("%d ",listaFila[n->sudo[i][k]]);
       //listaColumna[n->sudo[k][i]] = 1;
       k++;
     }
