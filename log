@@ -428,3 +428,27 @@ Wed, May  7, 2025  6:38:32 PM:
  tests:  5|3
 total_score: 35/70
 a34e059
+lun 12 may 2025 08:13:50 -04: 
+Compilation failed
+test.c: In function ‘test_mod_adj’:
+test.c:156:8: error: too many arguments to function ‘get_size’; expected 0, have 1
+  156 |     if(get_size(adj) != 3){
+      |        ^~~~~~~~ ~~~
+In file included from test.c:4:
+list.h:26:5: note: declared here
+   26 | int get_size();
+      |     ^~~~~~~~
+test.c:157:78: error: too many arguments to function ‘get_size’; expected 0, have 1
+  157 |         sprintf(msg,"la lista deberia tener tamanno 3 pero tiene tamanno %d",get_size(adj));
+      |                                                                              ^~~~~~~~ ~~~
+list.h:26:5: note: declared here
+   26 | int get_size();
+      |     ^~~~~~~~
+list.c:19:5: error: conflicting types for ‘get_size’; have ‘int(List *)’
+   19 | int get_size(List* list){
+      |     ^~~~~~~~
+In file included from list.c:4:
+list.h:26:5: note: previous declaration of ‘get_size’ with type ‘int(void)’
+   26 | int get_size();
+      |     ^~~~~~~~
+e1108e5
