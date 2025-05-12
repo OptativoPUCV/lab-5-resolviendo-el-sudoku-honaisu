@@ -476,3 +476,7 @@ list.h:26:5: note: previous declaration of ‘get_size’ with type ‘int(void)
    26 | int get_size();
       |     ^~~~~~~~
 d57665a
+lun 12 may 2025 08:15:51 -04: 
+ tests:  5|3
+total_score: 35/70
+e55ff41
