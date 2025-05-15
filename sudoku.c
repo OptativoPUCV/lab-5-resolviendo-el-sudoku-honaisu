@@ -44,9 +44,9 @@ void print_node(Node* n){
 }
 
 int verificarConLista(const int sudo[9][9], int i, int k) {
-  for (i = 0, k = 0; i < 9; i++, k = 0) {
+  for (i = 0; i < 9; i++) {
     int lista[10] = {0} ;
-    do {
+    for (k = 0; k < 9; k++) {
       if (!sudo[i][k]) continue;
       if (lista[sudo[i][k]]) return 0;
 
@@ -69,9 +69,8 @@ int is_valid(Node* n){
     int i = 3 * (k / 3) + (p / 3);
     int j = 3 * (k % 3) + (p % 3);
     if (listaSub[n->sudo[i][j]]) return 0;
-    printf("%d ", n->sudo[i][j]);
     listaSub[n->sudo[i][j]] = 1;
-    if(p % 3 == 2) { putchar('\n'); k++; }
+    if(p % 3 == 2) { k++; }
     p++;
   }
   return 1;
@@ -96,7 +95,7 @@ List* get_adj_nodes(Node* n){
             counter++;
           };
           // Por si hay más de un espacio vacío,
-          // vuelve al valor original (?)
+          // vuelve al valor original
           counter = 1;
         }
         k++;
