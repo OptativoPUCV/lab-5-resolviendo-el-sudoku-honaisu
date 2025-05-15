@@ -74,8 +74,8 @@ int verificar_columnas(const int sudo[9][9]) {
 }
 
 int verificar_submatrices(const int sudo[9][9]) {
-  int k = 0, p = 0, lista[10] = {0}, i, j, casilla;
-  while (p < 9) {
+  int lista[10] = {0}, i, j, casilla;
+  for (int p = 0, k = 0; p < 9; p++) {
     i = 3 * (k / 3) + (p / 3);
     j = 3 * (k % 3) + (p % 3);
     casilla = sudo[i][j];
@@ -83,7 +83,6 @@ int verificar_submatrices(const int sudo[9][9]) {
     if (lista[casilla]) return 0;
     lista[casilla] = 1;
     if(p % 3 == 2) { k++; }
-    p++;
   }
   return 0;
 }
