@@ -101,20 +101,18 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
     List* list=createList();
-    int counter = 1;
     for(int i = 0, k = 0; i < 9; i++, k = 0) {
       while(k < 9){
         if (!n->sudo[i][k]) {
           // Si encuentra un valor nulo (0) en el sudo 
           // va agregando copias del nodo con ese valor rellenado (1 a 9)
-          while (counter <= 9) {
+          for (int counter = 1; counter <= 9; counter++) {
             int* new_number = (int*) malloc(sizeof(int));
             *new_number = counter; 
             Node* node_copy = copy(n);
             node_copy->sudo[i][k] = *new_number;
 
             (is_valid(node_copy)) ? pushBack(list, node_copy) : free(node_copy);
-            counter++;
           };
           return list;
         }
