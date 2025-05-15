@@ -80,12 +80,15 @@ int verificar_submatrices(const int sudo[9][9]) {
     for (int p = 0; p < 3; p++) {
       i = 3 * (k / 3) + (p / 3);
       j = 3 * (k % 3) + (p % 3);
+      
       casilla = sudo[i][j];
+      printf("%d ", casilla);
       if (lista[casilla]) return 0;
       if (!casilla) continue;
       
       lista[casilla] = 1;
     }
+    putchar('\n');
   }
   return 1;
 }
