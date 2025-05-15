@@ -75,15 +75,17 @@ int verificar_columnas(const int sudo[9][9]) {
 
 int verificar_submatrices(const int sudo[9][9]) {
   int lista[10] = {0}, i, j, casilla;
-  for (int p = 0, k = 0; p < 9; p++) {
-    i = 3 * (k / 3) + (p / 3);
-    j = 3 * (k % 3) + (p % 3);
-    casilla = sudo[i][j];
-    printf("%d ", casilla);
-    if (!casilla) continue;
-    if (lista[casilla]) return 0;
-    lista[casilla] = 1;
-    if (p % 3 == 2) { k++; putchar('\n');}
+  for (int k = 0; k < 9; k++) {
+    for (int p = 0; p < 9; p++) {
+      i = 3 * (k / 3) + (p / 3);
+      j = 3 * (k % 3) + (p % 3);
+      casilla = sudo[i][j];
+      printf("%d ", casilla);
+      if (!casilla) continue;
+      if (lista[casilla]) return 0;
+      lista[casilla] = 1;
+      if (p % 3 == 2) {putchar('\n');}
+    }
   }
   return 1;
 }
@@ -94,8 +96,7 @@ int is_valid(Node* n){
   if (!verificar_columnas(n->sudo)) return 0;
 
   // Caso 3: Submatrices
-  if (!verificar_submatrices(n->sudo)) return 0;
-  return 1;
+  return (verificar_submatrices(n->sudo)) ? 1 : 0;
 }
 
 
