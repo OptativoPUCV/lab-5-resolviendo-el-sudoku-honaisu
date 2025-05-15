@@ -506,3 +506,14 @@ mié 14 may 2025 20:25:52 -04:
  tests:  5|3
 total_score: 35/70
 19563dc
+mié 14 may 2025 20:28:31 -04: 
+ sudoku.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:68:9: error: variable ‘listaSub’ set but not used [-Werror=unused-but-set-variable]
+   68 |     int listaSub[10] = {0};
+      |         ^~~~~~~~
+cc1: all warnings being treated as errors
+b8b9be2
