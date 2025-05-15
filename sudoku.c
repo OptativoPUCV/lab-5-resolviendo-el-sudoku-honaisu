@@ -63,7 +63,7 @@ int verificar_columnas(const int sudo[9][9]) {
   for (int k = 0; k < 9; k++) {
     int lista[10] = {0} ;
     for (int i = 0; i < 9; i++) {
-      casilla = sudo[k][i];
+      casilla = sudo[i][k];
       if (!casilla) continue;
       if (lista[casilla]) return 0;
 
