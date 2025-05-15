@@ -63,7 +63,7 @@ int is_valid(Node* n){
   if (!verificarConLista(n->sudo, b, a)) return 0;
 
   // Caso 3: Submatrices
-  int k = 4;
+  int k = 1;
   for(int p = 0; p < 9; p++) {
     int listaSub[10] = {0};
     int i = 3 * (k / 3) + (p / 3);
