@@ -64,7 +64,7 @@ int is_valid(Node* n){
 
   // Caso 3: Submatrices
   int k = 4;
-  for(int p = 0; p < 9; ) {
+  for(int p = 0; p < 9; p++) {
     //int listaSub[10] = {0};
     int i = 3 * (k / 3) + (p / 3);
     int j = 3 * (k % 3) + (p % 3);
@@ -73,7 +73,6 @@ int is_valid(Node* n){
     printf("%d ", n->sudo[i][j]);
     //listaSub[n->sudo[i][j]] = 1;
     if(p % 3 == 2) putchar('\n');
-    p++;
   }
   return 1;
 }
@@ -87,7 +86,7 @@ List* get_adj_nodes(Node* n){
         if (!n->sudo[i][k]) {
           // Si encuentra un valor nulo (0) en el sudo 
           // va agregando copias del nodo con ese valor rellenado (1 a 9)
-          while (counter < 9) {
+          while (counter <= 9) {
             int* new_number = (int*) malloc(sizeof(int));
             *new_number = counter; 
             Node* node_copy = copy(n);
