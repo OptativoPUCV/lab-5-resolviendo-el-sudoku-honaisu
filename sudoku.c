@@ -87,7 +87,6 @@ int verificar_submatrices(const int sudo[9][9]) {
       
       lista[casilla] = 1;
     }
-    puts("\n");
   }
   return 1;
 }
