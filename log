@@ -879,3 +879,8 @@ list.h:17:18: note: expected ‘List *’ but argument is of type ‘Node *’
    17 | void* next(List* list);
       |            ~~~~~~^~~~
 ec6ca00
+mié 14 may 2025 21:47:04 -04: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+7d31109
