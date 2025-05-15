@@ -73,22 +73,26 @@ int verificar_columnas(const int sudo[9][9]) {
   return 1;
 }
 
+int verificar_submatrices(const int sudo[9][9]) {
+  int k = 0, p = 0;
+  int lista[10] = {0};
+  while (p < 9) {
+    int i = 3 * (k / 3) + (p / 3);
+    int j = 3 * (k % 3) + (p % 3);
+    if (lista[sudo[i][j]]) return 0;
+    lista[sudo[i][j]] = 1;
+    if(p % 3 == 2) { k++; for(int m = 0; m < 9; m++) lista[m] = 0; }
+    p++;
+  }
+}
+
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   if (!verificar_filas(n->sudo)) return 0;
-  if (!verificar_columnas(n->sudo)) return 0;
+  else if (!verificar_columnas(n->sudo)) return 0;
 
   // Caso 3: Submatrices
-  int k = 0, p = 0;
-  while (p < 9) {
-    int listaSub[10] = {0};
-    int i = 3 * (k / 3) + (p / 3);
-    int j = 3 * (k % 3) + (p % 3);
-    if (listaSub[n->sudo[i][j]]) return 0;
-    listaSub[n->sudo[i][j]] = 1;
-    if(p % 3 == 2) { k++; }
-    p++;
-  }
+  if (!verificar_submatrices(n->sudo)) return 0;
   return 1;
 }
 
