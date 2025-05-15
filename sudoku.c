@@ -84,6 +84,7 @@ int verificar_submatrices(const int sudo[9][9]) {
     if(p % 3 == 2) { k++; for(int m = 0; m < 9; m++) lista[m] = 0; }
     p++;
   }
+  return 1;
 }
 
 int is_valid(Node* n){
