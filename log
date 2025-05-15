@@ -722,3 +722,9 @@ sudoku.c:79:17: error: expected expression before ‘{’ token
    79 |     lista[10] = {0};
       |                 ^
 9555311
+mié 14 may 2025 21:07:52 -04: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|3
+total_score: 35/70
+33972c4
