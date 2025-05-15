@@ -43,12 +43,27 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int verificarConLista(const int sudo[9][9], int i, int k) {
+int verificar_filas(const int sudo[9][9]) {
   int casilla;
-  for (i = 0; i < 9; i++) {
+  for (int i = 0; i < 9; i++) {
     int lista[10] = {0} ;
-    for (k = 0; k < 9; k++) {
+    for (int k = 0; k < 9; k++) {
       casilla = sudo[i][k];
+      if (!casilla) continue;
+      if (lista[casilla]) return 0;
+
+      lista[casilla] = 1;
+    }
+  }
+  return 1;
+}
+
+int verificar_columnas(const int sudo[9][9]) {
+  int casilla;
+  for (int i = 0; i < 9; i++) {
+    int lista[10] = {0} ;
+    for (int k = 0; k < 9; k++) {
+      casilla = sudo[k][i];
       if (!casilla) continue;
       if (lista[casilla]) return 0;
 
@@ -61,8 +76,8 @@ int verificarConLista(const int sudo[9][9], int i, int k) {
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   int a = 0, b = 0;
-  if (!verificarConLista(n->sudo, a, b)) return 0;
-  if (!verificarConLista(n->sudo, b, a)) return 0;
+  if (!verificar_filas(n->sudo)) return 0;
+  if (!verificar_columnas(n->sudo)) return 0;
 
   // Caso 3: Submatrices
   int k = 0, p = 0;
