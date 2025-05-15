@@ -93,7 +93,7 @@ int is_valid(Node* n){
   if (!verificar_columnas(n->sudo)) return 0;
 
   // Caso 3: Submatrices
-  if (!verificar_submatrices(n->sudo)) return 0;
+  //if (!verificar_submatrices(n->sudo)) return 0;
   return 1;
 }
 
