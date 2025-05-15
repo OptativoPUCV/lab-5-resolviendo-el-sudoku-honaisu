@@ -86,14 +86,15 @@ List* get_adj_nodes(Node* n){
         if (!n->sudo[i][k]) {
           // Si encuentra un valor nulo (0) en el sudo 
           // va agregando copias del nodo con ese valor rellenado (1 a 9)
-          do{
+          while (counter < 9) {
             int* new_number = (int*) malloc(sizeof(int));
             *new_number = counter; 
             Node* node_copy = copy(n);
             node_copy->sudo[i][k] = *new_number;
 
             (is_valid(node_copy)) ? pushBack(list, node_copy) : free(node_copy);
-          } while ((counter = counter + 1) < 9);
+            counter++;
+          };
           // Por si hay más de un espacio vacío,
           // vuelve al valor original (?)
           counter = 1;
