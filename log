@@ -847,3 +847,14 @@ mié 14 may 2025 21:31:02 -04:
  tests:  6|2
 total_score: 45/70
 d09b9e4
+mié 14 may 2025 21:42:24 -04: 
+ sudoku.c | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:138:11: error: unused variable ‘adj_nodes’ [-Werror=unused-variable]
+  138 |     List* adj_nodes = get_adj_nodes(current);
+      |           ^~~~~~~~~
+cc1: all warnings being treated as errors
+020191b
