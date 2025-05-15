@@ -74,21 +74,18 @@ int verificar_columnas(const int sudo[9][9]) {
 }
 
 int verificar_submatrices(const int sudo[9][9]) {
-  int i, j, casilla;
-  for (int k = 0; k < 9; k++) {
-    int lista[10] = {0};
-    for (int p = 0; p < 9; p++) {
-      i = 3 * (k / 3) + (p / 3);
-      j = 3 * (k % 3) + (p % 3);
-      
-      casilla = sudo[i][j];
-      printf("%d ", casilla);
-      if (lista[casilla]) return 0;
-      if (!casilla) continue;
-      
-      lista[casilla] = 1;
+  for (int block_i = 0; block_i < 3; block_i++) {
+    for (int block_j = 0; block_j < 3; block_j++) {
+      int lista[10] = {0};
+      for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+          int val = sudo[block_i*3 + i][block_j*3 + j];
+          if (val == 0) continue;
+          if (lista[val]) return 0;
+          lista[val] = 1;
+        }
+      }
     }
-    puts("\n");
   }
   return 1;
 }
