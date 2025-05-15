@@ -666,3 +666,9 @@ mié 14 may 2025 20:58:09 -04:
  tests:  5|3
 total_score: 35/70
 a817e06
+mié 14 may 2025 20:59:41 -04: 
+ sudoku.c | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+ tests:  0|5
+total_score: 0/70
+a2fc996
