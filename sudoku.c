@@ -64,7 +64,7 @@ int is_valid(Node* n){
 
   // Caso 3: Submatrices
   int k = 4;
-  for(int p = 0; p < 8; p++) {
+  for(int p = 0; p < 9; ) {
     //int listaSub[10] = {0};
     int i = 3 * (k / 3) + (p / 3);
     int j = 3 * (k % 3) + (p % 3);
@@ -73,6 +73,7 @@ int is_valid(Node* n){
     printf("%d ", n->sudo[i][j]);
     //listaSub[n->sudo[i][j]] = 1;
     if(p % 3 == 2) putchar('\n');
+    p++;
   }
   return 1;
 }
