@@ -81,8 +81,7 @@ int verificar_submatrices(const int sudo[9][9]) {
       i = 3 * (k / 3) + (p / 3);
       j = 3 * (k % 3) + (p % 3);
       casilla = sudo[i][j];
-      printf("%d ", casilla);
-      if (p % 3 == 2) {putchar('\n');}
+      if (p % 3 == 2) { break; }
       if (lista[casilla]) return 0;
       if (!casilla) continue;
       
