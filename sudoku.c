@@ -81,7 +81,7 @@ int verificar_submatrices(const int sudo[9][9]) {
     int j = 3 * (k % 3) + (p % 3);
     if (lista[sudo[i][j]]) return 0;
     lista[sudo[i][j]] = 1;
-    if(p % 3 == 2) { k++; for(int m = 0; m < 9; m++) lista[m] = 0; }
+    if(p % 3 == 2) { k++; }
     p++;
   }
   return 1;
