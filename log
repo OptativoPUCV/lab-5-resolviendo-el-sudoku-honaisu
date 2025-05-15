@@ -858,3 +858,8 @@ sudoku.c:138:11: error: unused variable ‘adj_nodes’ [-Werror=unused-variable
       |           ^~~~~~~~~
 cc1: all warnings being treated as errors
 020191b
+mié 14 may 2025 21:43:28 -04: 
+ sudoku.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+ tests:  0|0
+f64dd08
