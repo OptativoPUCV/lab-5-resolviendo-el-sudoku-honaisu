@@ -64,7 +64,7 @@ int is_valid(Node* n){
 
   // Caso 3: Submatrices
   int k = 4, p;
-  for(p = 0; p < 9; p++) {
+  for(p = 0; p < 8; p++) {
     //int listaSub[10] = {0};
     int i = 3 * (k / 3) + (p / 3);
     int j = 3 * (k % 3) + (p % 3);
