@@ -708,3 +708,17 @@ mié 14 may 2025 21:06:15 -04:
  tests:  0|5
 total_score: 0/70
 c920fb6
+mié 14 may 2025 21:07:45 -04: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘verificar_submatrices’:
+sudoku.c:79:5: error: ‘lista’ undeclared (first use in this function)
+   79 |     lista[10] = {0};
+      |     ^~~~~
+sudoku.c:79:5: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:79:17: error: expected expression before ‘{’ token
+   79 |     lista[10] = {0};
+      |                 ^
+9555311
