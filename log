@@ -571,3 +571,14 @@ mié 14 may 2025 20:36:06 -04:
  tests:  5|3
 total_score: 35/70
 3567480
+mié 14 may 2025 20:37:36 -04: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:67:23: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   67 |   for(int p = 0; p < 9, k < 9; p++) {
+      |                       ^
+cc1: all warnings being treated as errors
+fe268ba
