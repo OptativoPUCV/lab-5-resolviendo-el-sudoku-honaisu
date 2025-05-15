@@ -44,14 +44,16 @@ void print_node(Node* n){
 }
 
 int verificarConLista(const int sudo[9][9], int i, int k) {
+  int casilla;
   for (i = 0; i < 9; i++) {
     int lista[10] = {0} ;
     for (k = 0; k < 9; k++) {
-      if (!sudo[i][k]) continue;
-      if (lista[sudo[i][k]]) return 0;
+      casilla = sudo[i][k];
+      if (!casilla) continue;
+      if (lista[casilla]) return 0;
 
-      lista[sudo[i][k]] = 1;
-    } while((k++)<8);
+      lista[casilla] = 1;
+    }
   }
   return 1;
 }
