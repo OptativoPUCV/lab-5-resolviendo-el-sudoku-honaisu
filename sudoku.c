@@ -94,12 +94,14 @@ int verificar_submatrices(const int sudo[9][9]) {
 }
 
 int is_valid(Node* n){
+  return (verificar_filas(n->sudo) && verificar_columnas(n->sudo) && verificar_submatrices(n->sudo)) ? 1 : 0;
+  /*
   // Caso 1 y 2: Filas y columnas
   if (!verificar_filas(n->sudo)) return 0;
   if (!verificar_columnas(n->sudo)) return 0;
 
   // Caso 3: Submatrices
-  return (verificar_submatrices(n->sudo)) ? 1 : 0;
+  return (verificar_submatrices(n->sudo)) ? 1 : 0;*/
 }
 
 
