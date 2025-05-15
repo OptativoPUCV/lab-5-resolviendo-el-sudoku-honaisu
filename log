@@ -619,3 +619,9 @@ sudoku.c:78:7: error: unused variable ‘a’ [-Werror=unused-variable]
       |       ^
 cc1: all warnings being treated as errors
 fba9deb
+mié 14 may 2025 20:51:00 -04: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  5|3
+total_score: 35/70
+c205ab2

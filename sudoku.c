@@ -75,7 +75,6 @@ int verificar_columnas(const int sudo[9][9]) {
 
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
-  int a = 0, b = 0;
   if (!verificar_filas(n->sudo)) return 0;
   if (!verificar_columnas(n->sudo)) return 0;
 
