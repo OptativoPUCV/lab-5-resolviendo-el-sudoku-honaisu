@@ -68,7 +68,6 @@ int is_valid(Node* n){
     int listaSub[10] = {0};
     int i = 3 * (k / 3) + (p / 3);
     int j = 3 * (k % 3) + (p % 3);
-    if (!n->sudo[i][j]) continue;
     if (listaSub[n->sudo[i][j]]) return 0;
     printf("%d ", n->sudo[i][j]);
     listaSub[n->sudo[i][j]] = 1;
