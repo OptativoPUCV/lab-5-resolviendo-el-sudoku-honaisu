@@ -500,3 +500,9 @@ sudoku.c:48:7: error: unused variable ‘a’ [-Werror=unused-variable]
       |       ^
 cc1: all warnings being treated as errors
 506c239
+mié 14 may 2025 20:25:52 -04: 
+ sudoku.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ tests:  5|3
+total_score: 35/70
+19563dc

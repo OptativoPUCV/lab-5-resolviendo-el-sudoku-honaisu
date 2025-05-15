@@ -43,10 +43,25 @@ void print_node(Node* n){
     printf("\n");
 }
 
+int verificarConLista(const int sudo[9][9], int i, int k) {
+  for (i = 0, k = 0; i < 9; i++, k = 0) {
+    int lista[10] = {0} ;
+    do {
+      if (!sudo[i][k]) continue;
+      if (lista[sudo[i][k]]) return 0;
+
+      lista[sudo[i][k]] = 1;
+    } while((k++)<8);
+  }
+  return 1;
+}
+
 int is_valid(Node* n){
   // Caso 1 y 2: Filas y columnas
   int a = 0, b = 0;
-  
+  if (!verificarConLista(n->sudo, a, b)) return 0;
+  if (!verificarConLista(n->sudo, b, a)) return 0;
+
   // Caso 3: Submatrices
   int k = 0, p;
   for(p = 0; p < 9; p++) {
