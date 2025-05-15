@@ -486,3 +486,17 @@ mié 14 may 2025 20:20:32 -04:
  tests:  5|3
 total_score: 35/70
 7cc8da6
+mié 14 may 2025 20:23:37 -04: 
+ sudoku.c | 15 ---------------
+ 1 file changed, 15 deletions(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:48:14: error: unused variable ‘b’ [-Werror=unused-variable]
+   48 |   int a = 0, b = 0;
+      |              ^
+sudoku.c:48:7: error: unused variable ‘a’ [-Werror=unused-variable]
+   48 |   int a = 0, b = 0;
+      |       ^
+cc1: all warnings being treated as errors
+506c239
