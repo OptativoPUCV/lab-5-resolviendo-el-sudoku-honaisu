@@ -60,10 +60,10 @@ int verificar_filas(const int sudo[9][9]) {
 
 int verificar_columnas(const int sudo[9][9]) {
   int casilla;
-  for (int k = 0; k < 9; k++) {
+  for (int i = 0; i < 9; i++) {
     int lista[10] = {0} ;
-    for (int i = 0; i < 9; i++) {
-      casilla = sudo[i][k];
+    for (int k = 0; k < 9; k++) {
+      casilla = sudo[k][i];
       if (!casilla) continue;
       if (lista[casilla]) return 0;
 
