@@ -60,9 +60,9 @@ int verificar_filas(const int sudo[9][9]) {
 
 int verificar_columnas(const int sudo[9][9]) {
   int casilla;
-  for (int i = 0; i < 9; i++) {
+  for (int k = 0; k < 9; k++) {
     int lista[10] = {0} ;
-    for (int k = 0; k < 9; k++) {
+    for (int i = 0; i < 9; i++) {
       casilla = sudo[k][i];
       if (!casilla) continue;
       if (lista[casilla]) return 0;
@@ -94,7 +94,9 @@ int verificar_submatrices(const int sudo[9][9]) {
 }
 
 int is_valid(Node* n){
-  return (verificar_filas(n->sudo) && verificar_columnas(n->sudo) && verificar_submatrices(n->sudo)) ? 1 : 0;
+  return (verificar_filas(n->sudo) 
+  && verificar_columnas(n->sudo) 
+  && verificar_submatrices(n->sudo)) ? 1 : 0;
   /*
   // Caso 1 y 2: Filas y columnas
   if (!verificar_filas(n->sudo)) return 0;
